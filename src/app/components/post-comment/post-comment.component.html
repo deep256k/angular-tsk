@@ -1,0 +1,11 @@
+<div class="center-container">
+  <h2>Post Details Page</h2>
+  <p class="blog-title" *ngIf="blogDetails">{{blogDetails.title}}</p>
+  <button class="selct-button delete-post" (click)="deletePost()">Delete Post</button>
+  <p class="blog-content" *ngIf="blogDetails">{{blogDetails.body}}</p>
+  <button class="selct-button" (click)="showComments()">Comments</button>
+  <button class="selct-button" *ngIf="showbutton" (click)="hideComments()">Hide Comments</button>
+  <div *ngIf="show">
+    <p class="user-post comment-details" *ngFor="let data of commentData">{{data.body}}</p>
+  </div>
+</div>

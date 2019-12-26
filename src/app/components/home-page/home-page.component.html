@@ -1,0 +1,14 @@
+<div class="center-container">
+  <h2>Home page</h2>
+  <table>
+    <tr>
+      <th v-for="heading in tableHeading" :key="heading.ids">{{heading}}</th>
+      <th></th>
+    </tr>
+    <tr *ngFor ='let data of userData ; let i = index'>
+      <td>{{data.name}}</td>
+      <td>{{data.company.name}}</td>
+      <td><button class="selct-button" (click) = "navigateToPosts(i)">select</button></td>
+    </tr>
+  </table>
+</div>

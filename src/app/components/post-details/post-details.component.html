@@ -1,0 +1,7 @@
+ <div class="center-container">
+   <h2>Posts page</h2>
+   <div blog-container>
+     <a class="user-post" *ngFor='let post of userPost ; let i = index'
+       (click) ="navigateToDetails(i)">{{post.title}}</a>
+   </div>
+ </div>
